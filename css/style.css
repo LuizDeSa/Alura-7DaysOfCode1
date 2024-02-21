@@ -3,6 +3,7 @@
 :root{
     --fonte-principal: 'Inter', sans-serif;
     --cinza1: #3A404E;
+    --cinza200: #EAECF0;
     --cinza500 :#667085;
     --cinza900 :#101828;
     --branco: #fff;
@@ -154,4 +155,37 @@ body {
     width: 70%;
 }
 
+.oportunidades{
+    width: 60%;   
+    margin: 4em auto;
+}
+
+.oportunidades__titulo{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.oportunidade{
+    border: 1px solid var(--cinza200);
+    border-radius: 16px;
+    padding: 1.5rem 1.5rem 28px 1.5rem;
+}
+
+.oportunidade__titulo{
+    color: var(--cinza900);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.oportunidade__descricao{
+    color: var(--cinza500);
+    font-weight: 500;
+}
+
+.oportunidade__descricao .titulo{
+    display: inline-block;
+    margin-right: 24px;
+}
 
