@@ -22,10 +22,11 @@ body {
 .cabecalho{
     display: flex;
     justify-content: space-around;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     font-weight: 500;
     align-items: center;
+    box-shadow: 0px 0px 3px #bbb;
 }
 
 .cabecalho__logo .logo__link {
@@ -43,7 +44,7 @@ body {
 .cabecalho__nav{
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 2rem;
 }
 
 .cabecalho__nav .nav__link{
@@ -70,7 +71,7 @@ body {
     align-items: center;
     justify-content: space-around;
     gap: 24px;
-    margin: 6em 20em 4em 20em;
+    margin: 6rem 20rem 4rem 20rem;
 }
 
 .sobre-nos__titulo{
@@ -102,7 +103,7 @@ body {
     grid-template-columns: repeat(auto-fit,  minmax(190px, 280px));
     justify-content: space-around;
     align-content: center;
-    padding: 4em;
+    padding: 4rem;
 }
 
 .metrica__subtitulo{
@@ -122,4 +123,35 @@ body {
 .metrica__texto{
     color: var(--cinza500);
 }
+
+/* vagas-abertas */
+.vagas-abertas{
+    text-align: center;
+}
+
+.vagas-abertas__titulo{
+    font-weight: 500;
+    color: var(--vermelho1);
+    font-size: 14px;
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.vagas-abertas__subtitulo{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--cinza900);
+    margin-bottom: 1.5rem;
+}
+
+.vagas-abertas__descricao{
+    font-size: 20px;
+    color: var(--cinza500);
+    margin-bottom: 3.5rem;
+}
+
+.vagas-abertas__img{
+    width: 70%;
+}
+
 
