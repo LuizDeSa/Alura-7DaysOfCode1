@@ -8,6 +8,7 @@
     --cinza900 :#101828;
     --branco: #fff;
     --vermelho1: #8E2424;
+    --rosa: rgba(195, 25, 25, 0.05);
 
 
 }
@@ -194,3 +195,44 @@ body {
     margin-right: 24px;
 }
 
+/* depoimentos */
+.depoimentos{
+    padding: 4rem 2em;
+    margin: 4em auto;
+    width: 80%;
+    text-align: center; 
+    background: var(--rosa);    
+    border-radius: 16px;
+}
+
+.depoimento__titulo{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--vermelho1);
+    margin-bottom: 1.5rem;
+}
+
+.depoimento__descricao{
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--cinza900);
+}
+
+.colaborador{
+    margin-top: 2.5rem;
+}
+
+.colaborador__avatar{
+    margin-bottom: 0.8rem;
+}
+
+.colaborador__nome{
+    font-weight: 500;
+    color: var(--cinza900);
+    margin-bottom: 1rem;
+}
+
+.colaborador__cargo{
+    font-size: 14px;
+    color: var(--cinza500);
+}
