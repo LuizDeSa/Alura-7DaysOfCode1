@@ -31,6 +31,67 @@ body {
     box-shadow: 0px 0px 3px #bbb;
 }
 
+.cabecalho__logo{
+    display: flex;
+    position: relative;
+
+}
+
+#checkbox__cabecalho{
+    display: none;
+}
+
+.menu-hamburguer{
+    display: none;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/Menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 12px;
+}
+
+.menu-hamburguer__lista{
+    background: var(--branco);
+    width: 200px;
+    border: 1px solid var(--cinza200);
+}
+
+.menu-hamburguer__lista .nav__link{
+    padding: 1em;
+    display: block;
+    color: var(--cinza900);
+    background-color: var(--rosa)
+}
+
+.menu-hamburguer__lista .nav__item{
+    border-bottom: 1px solid var(--cinza200);
+}
+
+.menu-hamburguer__lista{
+    display: none;
+    position: absolute;
+    top: 120%;
+}
+
+.menu-hamburguer__lista .link__cadastrar{
+    padding: 1rem 1rem;
+    display: none;
+    border-radius: none;
+    color: var(--branco);
+    background-color: var(--vermelho1);
+}
+
+.menu-hamburguer__lista .link__entrar{
+    color: var(--cinza500);
+    display: none;
+}
+
+#checkbox__cabecalho:checked ~ .menu-hamburguer__lista{
+    display: block;
+}
+
+
 .cabecalho__logo .logo__link {
     display: flex;
     align-items: center;
@@ -41,7 +102,6 @@ body {
     font-size: 18px;
     color: var(--cinza1);
 }
-
 
 .cabecalho__nav{
     display: flex;
@@ -56,7 +116,6 @@ body {
 .cabecalho__links .link__entrar{
     color: var(--cinza500);
     padding: 10px 18px 10px 18px;
-
 }
 
 .cabecalho__links .link__cadastrar{
@@ -73,7 +132,8 @@ body {
     align-items: center;
     justify-content: space-around;
     gap: 24px;
-    margin: 6rem 20rem 4rem 20rem;
+    margin: 6rem auto 4rem auto;
+    width: 60%;
 }
 
 .sobre-nos__titulo{
@@ -95,17 +155,13 @@ body {
 
 /* metricas */
 .metricas{
-    /* display: flex;
-    justify-content: space-around;
-    align-items: center; */
-    /* gap: 40px; */
     display: grid;
-    /* grid-template-columns: repeat(4, 280px); */
-    /* grid-template-columns: repeat(4,  minmax(190px, 280px)); */
     grid-template-columns: repeat(auto-fit,  minmax(190px, 280px));
     justify-content: space-around;
     align-content: center;
-    padding: 4rem;
+    padding: 4rem 0;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .metrica__subtitulo{
@@ -239,7 +295,7 @@ body {
 
 .contato{
     background-color: var(--cinza50);
-    padding: 5rem 0 7rem 0;
+    padding: 5rem 0 2rem 0;
     text-align: center;
 }
 
@@ -257,7 +313,7 @@ body {
 }
 
 .cadastrar__contato{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .contato__email{
@@ -275,7 +331,6 @@ body {
     color: var(--cinza400);
 }
 
-
 .botao__cadastrar{
     background-color: var(--vermelho1);
     color: var(--branco);
@@ -287,4 +342,89 @@ body {
 
 .contato__rodape{
     color: var(--cinza400);
+}
+
+@media screen and (max-width: 1260px) {
+    .sobre-nos{
+        width: 70%;
+    }
+
+    .metricas{
+        grid-template-columns: 280px 280px;
+        gap: 20px;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .cabecalho__espaco{
+        display:none;
+    }
+
+    .sobre-nos{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .cabecalho{
+        justify-content: space-between;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .cabecalho__nav{
+        display: none;
+    }
+    
+    .menu-hamburguer{
+        display: block;
+    }
+
+    .sobre-nos, .metricas{
+        width: 95%;
+    }
+
+    .vagas-abertas__img, .oportunidades{
+        width: 90%;
+    }
+
+    .depoimentos{
+        width: 90%;
+        padding: 4rem 0.5rem;
+    }    
+}
+
+@media screen and (max-width: 620px) {
+    .menu-hamburguer__lista .link__cadastrar, .menu-hamburguer__lista .link__entrar{
+        display: block;
+    }
+
+    .cabecalho__links{
+        display: none;
+    }
+
+    .contato__titulo, .depoimento__descricao, .sobre-nos__sub-titulo{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .metrica__subtitulo{
+        font-size: 36px;
+    }
+
+    .metricas{
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        gap:40px;
+    }
+
+    .cadastrar__contato{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 }
